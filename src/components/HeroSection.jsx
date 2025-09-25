@@ -11,7 +11,7 @@ const HeroSection = () => {
         <div className="w-full h-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-400  flex items-center justify-center">
           <div className="text-white text-center px-4">
             <div className="text-6xl font-bold mb-4">
-              <img src="/hero.png" alt="Hero Image" />
+              <img src="/hero.jpg" alt="Hero Image" />
             </div>
             <p className="text-lg opacity-80"></p>
           </div>
