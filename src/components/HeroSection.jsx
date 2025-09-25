@@ -8,15 +8,15 @@ const HeroSection = () => {
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 flex items-center justify-center">
+        <div className="w-full h-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-400  flex items-center justify-center">
           <div className="text-white text-center px-4">
-            <div className="text-6xl font-bold mb-4">🏢</div>
-            <p className="text-lg opacity-80">
-              Commercial Real Estate Background
-            </p>
+            <div className="text-6xl font-bold mb-4">
+              <img src="/hero.png" alt="Hero Image" />
+            </div>
+            <p className="text-lg opacity-80"></p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/90 via-blue-500/70 to-blue-400/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-600/90 via-gray-900/70 to-blue-400/50"></div>
       </div>
 
       {/* Hero Content */}

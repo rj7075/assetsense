@@ -19,11 +19,9 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <span className="text-2xl font-bold text-blue-600">
-              Asset Sense
+              <img className="w-35 h-20 pt-2" src="/assetlogo.png" alt="Logo" />
             </span>
-            <span className="ml-2 text-sm text-gray-600">
-              Real Estate Consultancy
-            </span>
+            <span className="ml-2 text-sm text-gray-600"></span>
           </div>
 
           {/* Desktop Navigation */}
