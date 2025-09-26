@@ -65,7 +65,7 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col items-center justify-center bg-white border-t border-gray-200">
               {navItems.map((item) => (
                 <a
                   key={item.name}
@@ -77,12 +77,14 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="pt-2">
-                <button
-                  onClick={() => navigate("/contact")}
-                  className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white px-6 py-2 rounded-lg font-medium transition-colors w-full"
-                >
-                  Get Consultation
-                </button>
+                <a href="/contact">
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white px-6 py-2 rounded-lg font-medium transition-colors w-full"
+                  >
+                    Get Consultation
+                  </button>
+                </a>
               </div>
             </div>
           </div>
