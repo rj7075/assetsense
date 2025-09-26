@@ -73,7 +73,9 @@ const Footer = () => {
           {/* Company Branding */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img className="h-25 w-35" src="/assetlogo.png" alt="logo" />
+              <a href="/">
+                <img className="h-25 w-35" src="/assetlogo.png" alt="logo" />
+              </a>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Empowering Businesses Since 2008
