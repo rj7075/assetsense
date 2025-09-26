@@ -149,7 +149,7 @@ const Services = () => {
   return (
     <section className="bg-gradient-to-b from-gray-50 to-white" id="services">
       {/* Hero stats */}
-      <section className="relative py-28 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      <section className="relative py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
         {/* Hero Background with Overlay */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
@@ -181,7 +181,7 @@ const Services = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-8 leading-tight">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-8 leading-tight">
               Elevate Your{" "}
               <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                 Business Presence
@@ -226,10 +226,10 @@ const Services = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
+            <div className="flex flex-col pt-5 sm:flex-row gap-5 justify-center items-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-blue-900 hover:from-yellow-300 hover:to-orange-400 font-bold px-8 py-4 rounded-full shadow-2xl shadow-yellow-500/25 hover:shadow-yellow-500/40 transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-yellow-400 text-sm to-orange-500 text-blue-900 hover:from-yellow-300 hover:to-orange-400 font-bold px-8 py-4 rounded-full shadow-2xl shadow-yellow-500/25 hover:shadow-yellow-500/40 transition-all duration-300 transform hover:scale-105"
               >
                 <FaRocket className="w-5 h-5 mr-2" />
                 Launch Your Business Today
@@ -237,7 +237,7 @@ const Services = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold px-8 py-4 rounded-full backdrop-blur-md hover:shadow-xl transition-all duration-300"
+                className="border-2 border-white text-white text-sm  hover:bg-white hover:text-blue-900 font-bold px-8 py-4 rounded-full backdrop-blur-md hover:shadow-xl transition-all duration-300"
               >
                 <FaChartLine className="w-5 h-5 mr-2" />
                 Free Growth Consultation
@@ -457,7 +457,7 @@ const Services = () => {
               <Button
                 variant="secondary"
                 size="lg"
-                className="bg-white text-blue-600 hover:bg-gray-100 font-semibold"
+                className="bg-white text-blue-600 hover:bg-gray-100 text-xs font-semibold"
               >
                 <FaPhone className="w-4 h-4 mr-2" />
                 Get Started Today
@@ -465,7 +465,7 @@ const Services = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-blue-600 font-semibold"
+                className="border-white text-xs text-white hover:bg-white hover:text-blue-600 font-semibold"
               >
                 Book Free Consultation
                 <FaArrowRight className="w-4 h-4 ml-2" />

@@ -123,17 +123,17 @@ const About = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-purple-900/80" />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
-          <Badge className="mb-6 bg-orange-500 text-white font-medium text-lg px-6 py-3 shadow-lg">
+          <Badge className="mb-6 bg-orange-500 text-white font-medium text-xs px-6 py-3 shadow-lg">
             <FaRocket className="w-4 h-4 mr-2" />
             Since 2008 • Trusted by 10,000+ Businesses
           </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
             Your Virtual Office
             <span className="block bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
               Success Partner
             </span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-0.6xl md:text-2xl mb-8 opacity-90 max-w-3xl mx-auto leading-relaxed">
             Transforming businesses across India with premium virtual office
             solutions, commercial leasing, and unmatched customer service for
             over 15 years.
@@ -141,14 +141,14 @@ const About = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 text-lg transform hover:scale-105"
+              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2 text-sm transform hover:scale-105"
             >
               Get Your Virtual Office Today
             </Button>
             <Button
               variant="outline"
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg transform hover:scale-105"
+              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-6 py-2 text-sm transform hover:scale-105"
             >
               Schedule Free Consultation
             </Button>
