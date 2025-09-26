@@ -8,7 +8,7 @@ const HeroSection = () => {
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-400  flex items-center justify-center">
+        <div className="w-full h-full bg-gradient-to-r bg-gray-900/70  flex items-center justify-center">
           <div className="text-white text-center px-4">
             <div className="text-6xl font-bold mb-4">
               <img src="/hero.jpg" alt="Hero Image" />
@@ -16,7 +16,7 @@ const HeroSection = () => {
             <p className="text-lg opacity-80"></p>
           </div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-600/90 via-gray-900/70 to-blue-400/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r bg-gray-900/70"></div>
       </div>
 
       {/* Hero Content */}

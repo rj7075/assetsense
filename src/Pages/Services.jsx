@@ -158,8 +158,8 @@ const Services = () => {
               'url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80")',
           }}
         >
-          <div className="absolute inset-0 bg-blue-900/80 backdrop-blur-[1px]"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-800/80 to-purple-900/90"></div>
+          <div className="absolute inset-0  backdrop-blur-[1px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-br bg-gray-900/70"></div>
         </div>
 
         {/* Decorative Blurred Circles */}

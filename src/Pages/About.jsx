@@ -121,7 +121,7 @@ const About = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroCityscape})` }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-purple-900/80" />
+        <div className="absolute inset-0 bg-gradient-to-r bg-gray-900/70" />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-6">
           <Badge className="mb-6 bg-orange-500 text-white font-medium text-xs px-6 py-3 shadow-lg">
             <FaRocket className="w-4 h-4 mr-2" />
