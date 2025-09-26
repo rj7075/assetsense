@@ -258,7 +258,7 @@ const Portfolio = () => {
       <section
         className="relative bg-gradient-to-r from-gray-700 to-gray-900 text-white py-50  px-4 bg-cover bg-center"
         style={{
-          backgroundImage: `url('/asset1.jpg')`, // 👈 replace with your image from public folder
+          backgroundImage: `url('/asset3.jpg')`, // 👈 replace with your image from public folder
         }}
       >
         {/* Overlay for readability */}
