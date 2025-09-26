@@ -77,8 +77,10 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="pt-2">
-                onClick={() => navigate("/contact")}
-                <button className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white px-6 py-2 rounded-lg font-medium transition-colors w-full">
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white px-6 py-2 rounded-lg font-medium transition-colors w-full"
+                >
                   Get Consultation
                 </button>
               </div>
