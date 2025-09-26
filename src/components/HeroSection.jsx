@@ -4,19 +4,14 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex  pt-22 md:pt-10 items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex pt-22 md:pt-10 items-center justify-center overflow-hidden"
     >
       {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-r bg-gray-900/70  flex items-center justify-center">
-          <div className="text-white text-center px-4">
-            <div className="text-6xl font-bold mb-4">
-              <img src="/hero.jpg" alt="Hero Image" />
-            </div>
-            <p className="text-lg opacity-80"></p>
-          </div>
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r bg-gray-900/70"></div>
+      <div
+        className="absolute inset-0 bg-cover bg-center z-0"
+        style={{ backgroundImage: `url('/hero.jpg')` }}
+      >
+        <div className="absolute inset-0 bg-gray-900/70"></div>
       </div>
 
       {/* Hero Content */}
@@ -28,7 +23,7 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl md:text-5xl  lg:text-5xl font-bold mb-6 text-white">
+          <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold mb-6 text-white">
             Your Partner in Maximizing
             <span className="block text-blue-200">
               Commercial Property Value
@@ -36,7 +31,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-0.6xl md:text-1.5xl mb-8 text-white/90 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl mb-8 text-white/90 max-w-3xl mx-auto">
             15+ Years of Real Estate Consultancy Excellence in India. We
             specialize in transforming commercial properties into high-yield
             revenue streams through expert consultancy, execution, and financial
