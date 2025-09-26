@@ -73,8 +73,7 @@ const Footer = () => {
           {/* Company Branding */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <FaBuilding className="h-8 w-8 text-blue-400" />
-              <h3 className="text-xl font-bold">BusinessHub Pro</h3>
+              <img className="h-25 w-35" src="/assetlogo.png" alt="logo" />
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Empowering Businesses Since 2008
@@ -145,7 +144,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <FaPhone className="h-4 w-4 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-gray-300">+91 98765 43210</p>
+                  <p className="text-sm text-gray-300">+91 9907800600</p>
                   <p className="text-sm text-gray-400">
                     Business Infrastructure Services
                   </p>
@@ -155,9 +154,7 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <FaEnvelope className="h-4 w-4 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
-                  <p className="text-sm text-gray-300">
-                    info@businesshubpro.com
-                  </p>
+                  <p className="text-sm text-gray-300">info@assetsense.in</p>
                   <p className="text-sm text-gray-400">
                     24/7 Support Available
                   </p>
@@ -168,11 +165,8 @@ const Footer = () => {
                 <FaMapMarkerAlt className="h-4 w-4 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-gray-300">
-                    Tower A, Business Plaza
-                    <br />
-                    Sector 44, Gurugram - 122003
-                    <br />
-                    Haryana, India
+                    Emaar The Palm Square 02-007 Second Floor Sector 66,
+                    Gurugram - 122101 Haryana, India
                   </p>
                 </div>
               </div>
@@ -185,10 +179,26 @@ const Footer = () => {
               </h5>
               <div className="flex space-x-3">
                 {[
-                  { icon: FaLinkedin, href: "#", label: "LinkedIn" },
-                  { icon: FaFacebook, href: "#", label: "Facebook" },
-                  { icon: FaInstagram, href: "#", label: "Instagram" },
-                  { icon: FaTwitter, href: "#", label: "Twitter" },
+                  {
+                    icon: FaLinkedin,
+                    href: "https://www.linkedin.com/company/asset-sense-pvt-ltd",
+                    label: "LinkedIn",
+                  },
+                  {
+                    icon: FaFacebook,
+                    href: "https://www.facebook.com/AssetSenseIndia",
+                    label: "Facebook",
+                  },
+                  {
+                    icon: FaInstagram,
+                    href: "https://www.instagram.com/assetsense1/#",
+                    label: "Instagram",
+                  },
+                  {
+                    icon: FaTwitter,
+                    href: "https://x.com/mohan_skills",
+                    label: "Twitter",
+                  },
                 ].map((social, index) => {
                   const IconComponent = social.icon;
                   return (
@@ -247,7 +257,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <p className="text-sm text-gray-400">
-              © {currentYear} BusinessHub Pro. All rights reserved.
+              © {currentYear} Asset Sense. All rights reserved.
             </p>
 
             {/* Legal Links */}
@@ -277,18 +287,18 @@ const Footer = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "BusinessHub Pro",
+            name: "Asset Sense",
             description:
               "Comprehensive business infrastructure services including Virtual Office solutions, GST Registration, Commercial Leasing, and Interior Design",
-            url: "https://businesshubpro.com",
+            url: "https://assetsense.in",
             telephone: "+91-9876543210",
-            email: "info@businesshubpro.com",
+            email: "info@assetsense.in",
             address: {
               "@type": "PostalAddress",
-              streetAddress: "Tower A, Business Plaza, Sector 44",
+              streetAddress: "Emaar The Palm Square 02-007 Second Floor",
               addressLocality: "Gurugram",
               addressRegion: "Haryana",
-              postalCode: "122003",
+              postalCode: "122101",
               addressCountry: "IN",
             },
             foundingDate: "2008",

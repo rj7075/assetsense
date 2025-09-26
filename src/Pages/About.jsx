@@ -161,9 +161,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="fade-in-up">
-              <Badge className="mb-4 bg-blue-100 text-blue-800">
-                Our Story
-              </Badge>
+              <Badge className="mb-4 bg-blue-100 text-blue-800">About US</Badge>
               <h2 className="text-4xl font-bold mb-6 text-gray-900">
                 15+ Years of Excellence in Virtual Office Solutions
               </h2>

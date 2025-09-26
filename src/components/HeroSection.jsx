@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex  pt-22 md:pt-10 items-center justify-center overflow-hidden"
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
@@ -28,7 +28,7 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+          <h1 className="text-3xl md:text-5xl  lg:text-5xl font-bold mb-6 text-white">
             Your Partner in Maximizing
             <span className="block text-blue-200">
               Commercial Property Value
@@ -36,7 +36,7 @@ const HeroSection = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto">
+          <p className="text-0.6xl md:text-1.5xl mb-8 text-white/90 max-w-3xl mx-auto">
             15+ Years of Real Estate Consultancy Excellence in India. We
             specialize in transforming commercial properties into high-yield
             revenue streams through expert consultancy, execution, and financial

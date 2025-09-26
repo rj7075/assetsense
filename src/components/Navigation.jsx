@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -35,7 +39,10 @@ const Navigation = () => {
                 {item.name}
               </a>
             ))}
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+            <button
+              onClick={() => navigate("/contact")}
+              className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white px-6 py-2 rounded-lg font-medium transition-colors"
+            >
               Get Consultation
             </button>
           </div>
@@ -70,7 +77,8 @@ const Navigation = () => {
                 </a>
               ))}
               <div className="pt-2">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors w-full">
+                onClick={() => navigate("/contact")}
+                <button className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white px-6 py-2 rounded-lg font-medium transition-colors w-full">
                   Get Consultation
                 </button>
               </div>
