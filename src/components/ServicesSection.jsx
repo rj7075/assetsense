@@ -6,8 +6,10 @@ import {
   HiAcademicCap,
   HiHeart,
 } from "react-icons/hi2";
+import { useNavigate } from "react-router-dom";
 
 const ServicesSection = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: HiUserGroup,
@@ -47,7 +49,7 @@ const ServicesSection = () => {
       title: "Virtual Offices",
       description:
         "Establish virtual office networks across India with our proven 40+ locations success model.",
-      features: ["Prime addresses", "Mail handling", "Meeting rooms"],
+      features: ["Prime addresses", "GST/MCA Registration", "Meeting rooms"],
       highlight: "40+ Locations Across India",
     },
     {
@@ -151,7 +153,10 @@ const ServicesSection = () => {
               Let our 15+ years of expertise help you maximize your commercial
               property returns.
             </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors">
+            <button
+              onClick={() => navigate("/contact")}
+              className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white px-8 py-3 rounded-lg font-medium transition-colors"
+            >
               Schedule Free Consultation
             </button>
           </div>

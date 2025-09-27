@@ -11,13 +11,14 @@ const Navigation = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
+    { name: "Virtual Office", href: "/virtual-Office" },
     { name: "Services", href: "/services" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+    <nav className="fixed top-0 w-full bg-gray-900 backdrop-blur-sm border-b border-gray-600 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -31,7 +32,7 @@ const Navigation = () => {
                 />
               </a>
             </span>
-            <span className="ml-2 text-sm text-gray-600"></span>
+            <span className="ml-2 text-sm text-gray-100"></span>
           </div>
 
           {/* Desktop Navigation */}
@@ -40,7 +41,7 @@ const Navigation = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-900 hover:text-blue-600 transition-colors font-medium"
+                className="text-gray-100 hover:text-blue-600 transition-colors font-medium"
               >
                 {item.name}
               </a>

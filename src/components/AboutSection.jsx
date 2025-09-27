@@ -58,11 +58,11 @@ const AboutSection = () => {
             </h2>
 
             <p className="text-lg text-gray-600 mb-8">
-              Asset Sense has been at the forefront of commercial real estate
-              transformation for over 15 years. We specialize in maximizing
-              rental value for property owners through innovative space
-              solutions, strategic consultancy, and seamless execution across
-              India.
+              Asset Sense Private Limited has been at the forefront of
+              commercial real estate transformation for over 15 years. We
+              specialize in maximizing rental value for property owners through
+              innovative space solutions, strategic consultancy, and seamless
+              execution across India.
             </p>
 
             <p className="text-lg text-gray-600 mb-8">

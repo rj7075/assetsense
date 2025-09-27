@@ -111,19 +111,23 @@ const Footer = () => {
                 { href: "/", label: "Home" },
                 { href: "/about", label: "About Us" },
                 {
-                  href: "/services/virtual-office",
+                  href: "https://workspaces.assetsense.in/",
                   label: "Virtual Office in India",
                 },
                 {
-                  href: "/services/gst-registration",
+                  href: "https://workspaces.assetsense.in/virtual-office-in-mumbai",
+                  label: "Virtual Office in Mumbai",
+                },
+                {
+                  href: "https://workspaces.assetsense.in/",
                   label: "GST Registration Solutions",
                 },
                 {
-                  href: "/services/commercial-leasing",
+                  href: "/services",
                   label: "Commercial Leasing Gurugram & Delhi NCR",
                 },
                 {
-                  href: "/services/interior-design",
+                  href: "/services",
                   label: "Interior Design Solutions",
                 },
                 { href: "/contact", label: "Contact" },
@@ -167,8 +171,8 @@ const Footer = () => {
                 <FaMapMarkerAlt className="h-4 w-4 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-gray-300">
-                    Emaar The Palm Square 02-007 Second Floor Sector 66,
-                    Gurugram - 122101 Haryana, India
+                    Emaar The Palm Square 02-007 Second Floor Sector 66, Rajesh
+                    Pilot Marg, Gurugram - 122101 Haryana, India
                   </p>
                 </div>
               </div>

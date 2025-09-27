@@ -1,6 +1,8 @@
 import { HiPlay, HiArrowRight } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const navigate = useNavigate();
   return (
     <section
       id="home"
@@ -25,9 +27,7 @@ const HeroSection = () => {
           {/* Main Headline */}
           <h1 className="text-3xl md:text-5xl lg:text-5xl font-bold mb-6 text-white">
             Your Partner in Maximizing
-            <span className="block text-blue-200">
-              Commercial Property Value
-            </span>
+            <span className="text-[#5CC6EC]"> Commercial Property</span> Value
           </h1>
 
           {/* Subheadline */}
@@ -40,11 +40,17 @@ const HeroSection = () => {
 
           {/* Call to Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-white text-blue-600 hover:bg-white/90 transition-all duration-300 text-lg px-8 py-4 rounded-lg font-medium flex items-center gap-2">
+            <button
+              onClick={() => navigate("/contact")}
+              className="bg-white text-blue-600 cursor-pointer hover:bg-white/90 transition-all duration-300 text-lg px-8 py-4 rounded-lg font-medium flex items-center gap-2"
+            >
               Get Consultation
               <HiArrowRight className="h-5 w-5" />
             </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 transition-all duration-300 text-lg px-8 py-4 rounded-lg font-medium flex items-center gap-2">
+            <button
+              onClick={() => navigate("/services")}
+              className="border-2 border-white text-white cursor-pointer hover:bg-white hover:text-blue-600 transition-all duration-300 text-lg px-8 py-4 rounded-lg font-medium flex items-center gap-2"
+            >
               <HiPlay className="h-5 w-5" />
               Explore Services
             </button>

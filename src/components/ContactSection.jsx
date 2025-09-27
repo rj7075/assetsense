@@ -47,19 +47,20 @@ const ContactSection = () => {
     {
       icon: FaPhone,
       title: "Call Us",
-      content: "+91 98765 43210",
-      action: "tel:+919876543210",
+      content: "+91 9907800600",
+      action: "tel:+919907800600",
     },
     {
       icon: FaEnvelope,
       title: "Email Us",
-      content: "info@assetsense.com",
-      action: "mailto:info@assetsense.com",
+      content: "info@assetsense.in",
+      action: "mailto:info@assetsense.in",
     },
     {
       icon: FaMapMarkerAlt,
       title: "Visit Us",
-      content: "Gurgaon, Delhi NCR",
+      content:
+        "207, 2nd Floor, Emaar The Palm Square, Rajesh Pilot Marg, Sector 66, Gurugram, Haryana - 122101",
       action: "#",
     },
     {
@@ -147,7 +148,7 @@ const ContactSection = () => {
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+91 98765 43210"
+                      placeholder="Your phone number"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                     />
                   </div>
@@ -167,7 +168,7 @@ const ContactSection = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="your.email@example.com"
+                    placeholder="Your email address"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                   />
                 </div>
@@ -233,7 +234,7 @@ const ContactSection = () => {
                   <button
                     className="px-4 py-2 border border-green-600 text-green-600 rounded-lg hover:bg-green-600 hover:text-white transition-all duration-200"
                     onClick={() =>
-                      window.open("https://wa.me/919876543210", "_blank")
+                      window.open("https://wa.me/919907800600", "_blank")
                     }
                   >
                     Chat Now
@@ -288,6 +289,8 @@ const ContactSection = () => {
                     "Pune",
                     "Bangalore",
                     "Hyderabad",
+                    "Gandhinagar",
+                    "Guhati",
                   ].map((city) => (
                     <div key={city} className="flex items-center">
                       <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></div>

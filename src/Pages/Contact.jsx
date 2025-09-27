@@ -7,6 +7,7 @@ import {
   FaBuilding,
   FaShieldAlt,
   FaUsers,
+  FaArrowRight,
   FaAward,
   FaPaperPlane,
   FaCheckCircle,
@@ -19,63 +20,63 @@ const Contact = () => {
     name: "",
     email: "",
     phone: "",
-    company: "",
+    property: "",
     message: "",
   });
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setShowToast(true);
 
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast.error(
-        "Please fill in required fields (Name, email, and message are required)"
-      );
-      setIsSubmitting(false);
-      return;
-    }
+    // Hide toast after 3 seconds
+    setTimeout(() => setShowToast(false), 3000);
 
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      toast.error("Please enter a valid email address");
-      setIsSubmitting(false);
-      return;
-    }
-
-    try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      toast.success(
-        "Message sent successfully! We'll get back to you within 24 hours."
-      );
-
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        message: "",
-      });
-    } catch (error) {
-      toast.error("Failed to send message. Please try again.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleInputChange = (e) => {
+    // Reset form
     setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
+      name: "",
+      email: "",
+      phone: "",
+      property: "",
+      message: "",
     });
   };
 
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const contactInfo = [
+    {
+      icon: FaPhone,
+      title: "Call Us",
+      content: "+91 9907800600",
+      action: "tel:+919907800600",
+    },
+    {
+      icon: FaEnvelope,
+      title: "Email Us",
+      content: "info@assetsense.in",
+      action: "mailto:info@assetsense.in",
+    },
+    {
+      icon: FaMapMarkerAlt,
+      title: "Visit Us",
+      content:
+        "207, 2nd Floor, Emaar The Palm Square, Rajesh Pilot Marg, Sector 66, Gurugram, Haryana - 122101",
+      action: "#",
+    },
+    {
+      icon: FaClock,
+      title: "Working Hours",
+      content: "Mon-Sat: 9AM-7PM",
+      action: "#",
+    },
+  ];
   // Custom Button Component
   const Button = ({ children, className = "", ...props }) => (
     <button
@@ -111,7 +112,7 @@ const Contact = () => {
     >
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Header */}
-        <div className="text-center mb-12">
+        {/* <div className="text-center mb-12">
           <h1
             className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
             itemProp="headline"
@@ -126,10 +127,9 @@ const Contact = () => {
             India, GST registration help, commercial leasing in Gurugram & Delhi
             NCR, or interior design services - we're here to help.
           </p>
-        </div>
+        </div> */}
 
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
-          {/* Contact Information */}
+        {/* <div className="grid lg:grid-cols-5 gap-8 lg:gap-12">
           <div className="lg:col-span-2 space-y-6">
             <div>
               <h2 className="text-2xl font-semibold text-gray-900 mb-6">
@@ -190,7 +190,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Trust Elements */}
             <div className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-xl shadow-xl p-6">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
                 <div className="space-y-2">
@@ -211,7 +210,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Services Quick List */}
+           
             <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-100">
               <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-center">
                 <FaBuilding className="h-5 w-5 mr-2 text-blue-600" />
@@ -233,7 +232,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+         
           <div className="lg:col-span-3">
             <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden">
               <div className="p-6 md:p-8">
@@ -357,6 +356,243 @@ const Contact = () => {
                     </Button>
                   </div>
                 </form>
+              </div>
+            </div>
+          </div>
+        </div> */}
+
+        {/* another contact form */}
+
+        <div className="container mx-auto px-4 max-w-6xl">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full border border-blue-200 mb-4">
+              <span className="text-sm font-medium text-blue-600">
+                Get In Touch
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Maximize Your Commercial Property Returns
+              <span className="block text-blue-600">with Asset Sense</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Ready to transform your property into a high-yield investment? Let
+              our experts provide you with a comprehensive consultation and
+              customized strategy for maximum returns.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Contact Form */}
+            <div className="animate-fade-in-up">
+              <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-200">
+                <h3 className="text-2xl font-semibold mb-6">
+                  Schedule Your Free Consultation
+                </h3>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-medium mb-2"
+                      >
+                        Full Name*
+                      </label>
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="Your full name"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="phone"
+                        className="block text-sm font-medium mb-2"
+                      >
+                        Phone Number*
+                      </label>
+                      <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        required
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="Your phone number"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium mb-2"
+                    >
+                      Email Address*
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Your email address"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="property"
+                      className="block text-sm font-medium mb-2"
+                    >
+                      Property Location
+                    </label>
+                    <input
+                      id="property"
+                      name="property"
+                      type="text"
+                      value={formData.property}
+                      onChange={handleChange}
+                      placeholder="City or area of your property"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium mb-2"
+                    >
+                      Project Details
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Tell us about your property and goals..."
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all h-24 resize-none"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 flex items-center justify-center shadow-lg hover:shadow-xl"
+                  >
+                    Get Free Consultation
+                    <FaArrowRight className="ml-2" />
+                  </button>
+                </form>
+
+                {/* WhatsApp CTA */}
+                <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-xl">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3">
+                      <FaWhatsapp className="text-2xl text-green-600" />
+                      <div>
+                        <p className="font-medium text-green-800">
+                          Quick WhatsApp Consultation
+                        </p>
+                        <p className="text-sm text-green-600">
+                          Get instant response
+                        </p>
+                      </div>
+                    </div>
+                    <button
+                      className="px-4 py-2 border border-green-600 text-green-600 rounded-lg hover:bg-green-600 hover:text-white transition-all duration-200"
+                      onClick={() =>
+                        window.open("https://wa.me/919907800600", "_blank")
+                      }
+                    >
+                      Chat Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Information */}
+            <div className="animate-fade-in-up">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-6">
+                    Contact Information
+                  </h3>
+                  <div className="space-y-6">
+                    {contactInfo.map((info, index) => {
+                      const IconComponent = info.icon;
+                      return (
+                        <div
+                          key={index}
+                          className="flex items-center space-x-4"
+                        >
+                          <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
+                            <IconComponent className="text-xl text-blue-600" />
+                          </div>
+                          <div>
+                            <p className="font-medium">{info.title}</p>
+                            <a
+                              href={info.action}
+                              className="text-gray-600 hover:text-blue-600 transition-colors"
+                            >
+                              {info.content}
+                            </a>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Cities Presence */}
+                <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+                  <h4 className="font-semibold mb-4">
+                    Our Presence Across India
+                  </h4>
+                  <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
+                    {[
+                      "Delhi",
+                      "Gurgaon",
+                      "Mumbai",
+                      "Noida",
+                      "Ahmedabad",
+                      "Pune",
+                      "Bangalore",
+                      "Hyderabad",
+                      "Gandhinagar",
+                      "Guhati",
+                    ].map((city) => (
+                      <div key={city} className="flex items-center">
+                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></div>
+                        {city}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Success Story */}
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-6 border border-blue-200">
+                  <h4 className="font-semibold mb-3 text-blue-600">
+                    Recent Success
+                  </h4>
+                  <p className="text-sm text-gray-600 italic mb-3">
+                    "A property owner in Gurgaon increased rental yield by 35%
+                    after converting into a coworking hub with our execution
+                    support."
+                  </p>
+                  <p className="text-xs text-blue-600 font-medium">
+                    - Completed in 4 months
+                  </p>
+                </div>
               </div>
             </div>
           </div>

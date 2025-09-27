@@ -132,7 +132,7 @@ const ProcessSection = () => {
         {/* Success Metrics */}
         <div className="mt-20 bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-8 md:p-12 text-white">
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">Proven Results</h3>
+            <h3 className="text-3xl font-bold mb-4">Our Locations</h3>
             <p className="text-white/90 max-w-2xl mx-auto">
               Our systematic approach consistently delivers exceptional outcomes
               for property owners across India.
