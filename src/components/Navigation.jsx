@@ -52,7 +52,7 @@ const Navigation = () => {
             ))}
             <button
               onClick={() => navigate("/contact")}
-              className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white px-6 py-2 rounded-lg font-medium transition-colors"
+              className="bg-blue-900 hover:bg-blue-700 cursor-pointer text-white px-6 py-2 rounded-lg font-medium transition-colors"
             >
               Get Consultation
             </button>

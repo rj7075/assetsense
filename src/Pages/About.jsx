@@ -295,7 +295,7 @@ const About = () => {
                 <Button
                   variant="default"
                   size="sm" // instead of "lg"
-                  className="w-full sm:flex-1 border-blue-600 cursor-pointer text-blue-600 hover:bg-blue-600 hover:text-white"
+                  className="w-full sm:flex-1 border-blue-600 py-2 cursor-pointer text-blue-600 hover:bg-blue-600 hover:text-white"
                   onClick={() => navigate("/contact")}
                 >
                   Learn More About Us

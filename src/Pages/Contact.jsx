@@ -60,18 +60,21 @@ const Contact = () => {
 
   const contactInfo = [
     {
+      type: "phone",
       icon: FaPhone,
       title: "Call Us",
       content: "+91 9907800600",
       action: "tel:+919907800600",
     },
     {
+      type: "email",
       icon: FaEnvelope,
       title: "Email Us",
       content: "info@assetsense.in",
       action: "mailto:info@assetsense.in",
     },
     {
+      type: "address",
       icon: FaMapMarkerAlt,
       title: "Visit Us",
       content:
@@ -237,10 +240,14 @@ const Contact = () => {
             <div className="space-y-6">
               {contactInfo.map((info, index) => {
                 const IconComponent = info.icon;
+                let iconClasses = "text-blue-600 text-xl";
+                if (info.type === "address")
+                  iconClasses = "text-3xl px-1 mx-2.5 text-blue-600";
+
                 return (
                   <div key={index} className="flex items-center space-x-4">
                     <div className="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
-                      <IconComponent className="text-xl text-blue-600" />
+                      <IconComponent className={iconClasses} />
                     </div>
                     <div>
                       <p className="font-medium">{info.title}</p>
