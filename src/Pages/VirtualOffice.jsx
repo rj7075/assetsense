@@ -161,7 +161,7 @@ const VirtualOffice = () => {
       </section>
 
       {/* Company Story Section */}
-      <section className="py-20 bg-blue-50/50">
+      {/* <section className="py-20 bg-blue-50/50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="fade-in-up">
@@ -224,7 +224,7 @@ const VirtualOffice = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Core Values */}
       <section className="py-20">
@@ -275,8 +275,9 @@ const VirtualOffice = () => {
                   Customer First
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Your success is our success. We go above and beyond to ensure
-                  every client receives personalized, exceptional service.
+                  Your success is our success. We go above and beyond to
+                  ensure++ every client receives personalized, exceptional
+                  service.
                 </p>
               </CardContent>
             </Card>
@@ -608,17 +609,22 @@ const VirtualOffice = () => {
             virtual office needs. Get started today with a free consultation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+919907800600">
+              {" "}
+              <Button
+                href=""
+                size="lg"
+                className="bg-orange-500 cursor-pointer hover:bg-orange-600 text-white font-semibold px-8 py-4 text-lg flex items-center justify-center transform hover:scale-105"
+              >
+                <FaPhone className="w-5 h-3" />
+                Call Now: +91-9907800600
+              </Button>
+            </a>
             <Button
-              size="lg"
-              className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 text-lg transform hover:scale-105"
-            >
-              <FaPhone className="w-5 h-5 mr-2" />
-              Call Now: +91-9907800600
-            </Button>
-            <Button
+              onClick={() => navigate("/contact")}
               variant="outline"
               size="lg"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 text-lg transform hover:scale-105"
+              className="border-2 border-white text-white cursor-pointer hover:bg-white hover:text-blue-600 px-8 py-4 text-lg transform hover:scale-105"
             >
               <FaEnvelope className="w-5 h-5 mr-2" />
               Get Free Quote

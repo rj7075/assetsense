@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
-import { Navigate } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,27 +23,32 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex items-center">
             <span className="text-2xl font-bold text-blue-600">
-              <a href="/">
+              <NavLink to="/">
                 <img
                   className="cursor-pointer w-35 h-20 pt-2"
                   src="/assetlogo.png"
                   alt="Logo"
                 />
-              </a>
+              </NavLink>
             </span>
-            <span className="ml-2 text-sm text-gray-100"></span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <NavLink
                 key={item.name}
-                href={item.href}
-                className="text-gray-100 hover:text-blue-600 transition-colors font-medium"
+                to={item.href}
+                className={({ isActive }) =>
+                  `font-medium transition-colors ${
+                    isActive
+                      ? "text-blue-600 border-b-2 border-blue-600 pb-1"
+                      : "text-gray-100 hover:text-blue-600"
+                  }`
+                }
               >
                 {item.name}
-              </a>
+              </NavLink>
             ))}
             <button
               onClick={() => navigate("/contact")}
@@ -57,7 +61,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
-              className="p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 transition-colors"
+              className="p-2 rounded-md text-gray-100 hover:text-blue-600 hover:bg-gray-800 transition-colors"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? (
@@ -72,26 +76,33 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col items-center justify-center bg-white border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col items-center justify-center bg-gray-900 border-t border-gray-700">
               {navItems.map((item) => (
-                <a
+                <NavLink
                   key={item.name}
-                  href={item.href}
-                  className="block px-3 py-2 text-gray-900 hover:text-blue-600 transition-colors"
+                  to={item.href}
+                  className={({ isActive }) =>
+                    `block px-3 py-2 font-medium transition-colors ${
+                      isActive
+                        ? "text-blue-600 border-b-2 border-blue-600"
+                        : "text-gray-100 hover:text-blue-600"
+                    }`
+                  }
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
-                </a>
+                </NavLink>
               ))}
-              <div className="pt-2">
-                <a href="/contact">
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white px-6 py-2 rounded-lg font-medium transition-colors w-full"
-                  >
-                    Get Consultation
-                  </button>
-                </a>
+              <div className="pt-2 w-full flex justify-center">
+                <button
+                  onClick={() => {
+                    navigate("/contact");
+                    setIsOpen(false);
+                  }}
+                  className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white px-6 py-2 rounded-lg font-medium transition-colors w-full"
+                >
+                  Get Consultation
+                </button>
               </div>
             </div>
           </div>

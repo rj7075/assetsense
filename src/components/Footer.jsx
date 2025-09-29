@@ -110,6 +110,8 @@ const Footer = () => {
               {[
                 { href: "/", label: "Home" },
                 { href: "/about", label: "About Us" },
+                { href: "/services", label: "Services" },
+                { href: "/portfolio", label: "Portfolio" },
                 {
                   href: "https://workspaces.assetsense.in/",
                   label: "Virtual Office in India",
@@ -231,12 +233,13 @@ const Footer = () => {
             </p>
 
             <form onSubmit={handleNewsletterSubmit} className="space-y-3">
-              <Input
+              <input
                 type="email"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                className="w-full p-1 border rounded-md"
               />
               <Button
                 type="submit"
@@ -270,7 +273,7 @@ const Footer = () => {
             <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 text-sm">
               {[
                 { href: "/privacy-policy", label: "Privacy Policy" },
-                { href: "/terms-conditions", label: "Terms & Conditions" },
+                { href: "/terms-and-conditions", label: "Terms & Conditions" },
                 { href: "/refund-policy", label: "Refund Policy" },
               ].map((link, index) => (
                 <a

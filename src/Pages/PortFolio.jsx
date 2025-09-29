@@ -11,6 +11,8 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import toast from "react-hot-toast";
+import CompletedProjects from "../components/CompletedProject";
+import { useNavigate } from "react-router-dom";
 
 // Mock images (replace with actual imports in your project)
 const mockImages = {
@@ -27,6 +29,7 @@ const mockImages = {
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState("All");
+  const navigate = useNavigate();
 
   const projects = [
     {
@@ -245,10 +248,10 @@ const Portfolio = () => {
   };
 
   const handleContactClick = () => {
-    toast.success("Redirecting to contact page!");
+    toast.success("Redirecting to contact Us!");
     // In a real app, you might use react-router or next/link here
     setTimeout(() => {
-      window.location.href = "#contact";
+      navigate("/contact");
     }, 1000);
   };
 
@@ -286,6 +289,7 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+      <CompletedProjects />
 
       {/* Filter Buttons */}
       {/* <section className="py-12 px-4">
@@ -309,7 +313,7 @@ const Portfolio = () => {
       </section> */}
 
       {/* Featured Projects Grid */}
-      <section className="py-16 px-4">
+      {/* <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -376,7 +380,7 @@ const Portfolio = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Case Studies */}
       <section className="py-16 px-4 bg-white">
