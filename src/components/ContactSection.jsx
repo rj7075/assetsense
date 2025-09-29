@@ -230,7 +230,7 @@ const ContactSection = () => {
                     </div>
                   </div>
                   <button
-                    className="px-4 py-2 border border-green-600 text-xs text-green-600 rounded-lg hover:bg-green-600 hover:text-white transition-all duration-200"
+                    className="m-2 px-2 py-1 border border-green-600 text-xs text-green-600 rounded-lg hover:bg-green-600 hover:text-white transition-all duration-200"
                     onClick={() =>
                       window.open("https://wa.me/919907800600", "_blank")
                     }
