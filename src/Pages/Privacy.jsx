@@ -4,17 +4,17 @@ import React from "react";
 const Privacy = () => {
   return (
     <div className="max-w-5xl mx-auto p-6 mt-30 text-gray-800">
-      <h1 className="text-3xl font-bold mb-2">Asset Sense Workspaces</h1>
+      <h1 className="text-3xl font-bold mb-2">Asset Sense</h1>
       <h2 className="text-2xl font-semibold mb-6">Privacy Policy</h2>
       <p className="text-sm text-gray-500 mb-6">
         Effective Date: September 11, 2023
       </p>
 
       <p className="mb-6">
-        At Asset Sense Workspaces (“we,” “our,” or “us”), protecting your
-        privacy and personal data is a top priority. This Privacy Policy
-        explains how we collect, use, store, and protect your information when
-        you use our virtual office and business services.
+        At Asset Sense (“we,” “our,” or “us”), protecting your privacy and
+        personal data is a top priority. This Privacy Policy explains how we
+        collect, use, store, and protect your information when you use our
+        virtual office and business services.
       </p>
 
       {/* 1. Information We Collect */}

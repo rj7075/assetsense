@@ -5,7 +5,7 @@ const TermsAndConditions = () => {
   return (
     <div className="max-w-5xl mx-auto p-6 mt-30 mb-8 text-gray-800">
       <h1 className="text-3xl font-bold mb-6">
-        Terms &amp; Conditions – Asset Sense Workspaces
+        Terms &amp; Conditions – Asset Sense / Asset Sense Workspaces
       </h1>
 
       <p className="mb-6">

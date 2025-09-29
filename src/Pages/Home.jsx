@@ -4,7 +4,7 @@ import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import ServicesSection from "../components/ServicesSection";
 import ProcessSection from "../components/ProcessSection";
-import ContactSection from "../components/ContactSection";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
       <AboutSection />
       <ServicesSection />
       <ProcessSection />
-      <ContactSection />
+      <Contact />
     </div>
   );
 };

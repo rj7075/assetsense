@@ -281,10 +281,10 @@ const Portfolio = () => {
               500+ Happy Clients
             </Badge>
             <Badge variant="secondary" className="text-base px-4 py-2">
-              50+ Cities Covered
+              40+ Cities Covered
             </Badge>
             <Badge variant="secondary" className="text-base px-4 py-2">
-              10+ Years Experience
+              15+ Years Experience
             </Badge>
           </div>
         </div>
