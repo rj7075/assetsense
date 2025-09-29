@@ -110,7 +110,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <div className="animate-fade-in-up">
-            <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-200">
+            <div className="bg-white rounded-3xl p-5 shadow-lg border border-gray-200">
               <h3 className="text-2xl font-semibold mb-6">
                 Schedule Your Free Consultation
               </h3>
@@ -219,7 +219,7 @@ const ContactSection = () => {
               </form>
 
               {/* WhatsApp CTA */}
-              <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-xl">
+              <div className="mt-6 p-2 bg-green-50 border border-green-200 rounded-xl">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
                     <FaWhatsapp className="text-2xl text-green-600" />
@@ -230,7 +230,7 @@ const ContactSection = () => {
                     </div>
                   </div>
                   <button
-                    className="m-2 px-2 py-1 border border-green-600 text-xs text-green-600 rounded-lg hover:bg-green-600 hover:text-white transition-all duration-200"
+                    className=" px-2 py-2 border border-green-600 text-xs text-green-600 rounded-lg hover:bg-green-600 hover:text-white transition-all duration-200"
                     onClick={() =>
                       window.open("https://wa.me/919907800600", "_blank")
                     }
