@@ -516,7 +516,7 @@ const Portfolio = () => {
           <div className="flex justify-center items-center">
             <Button
               variant="secondary"
-              className="text-sm px-6 py-3"
+              className="text-sm cursor-pointer px-6 py-3"
               onClick={handleContactClick}
             >
               Get in Touch
