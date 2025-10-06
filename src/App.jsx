@@ -13,12 +13,14 @@ import { Toaster } from "react-hot-toast";
 import Privacy from "./Pages/Privacy";
 import TermsAndConditions from "./Pages/Termandcondition";
 import RefundPolicy from "./Pages/Refund";
+import ScrollToTop from "./components/ScrollTop";
 
 function App() {
   return (
     <>
       <Navigation />
       <Toaster />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
