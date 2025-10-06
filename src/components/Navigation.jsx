@@ -75,7 +75,7 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="md:hidden h-screen">
             <div className="px-2 pt-2 pb-3 space-y-1 flex flex-col items-center justify-center bg-gray-900 border-t border-gray-700">
               {navItems.map((item) => (
                 <NavLink
