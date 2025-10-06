@@ -19,13 +19,16 @@ const ProjectTabs = ({ activeProject, onProjectChange }) => {
         <button
           key={project.id}
           onClick={() => onProjectChange(project.id)}
-          className={`flex items-center gap-2 px-4 py-2 cursor-pointer rounded-xl font-medium transition-all duration-300 ${
-            activeProject === project.id
-              ? "bg-blue-600 text-white shadow-md"
-              : "bg-gray-400 text-gray-700 hover:bg-gray-200"
-          }`}
+          className={`flex items-center gap-2 px-5 py-2.5 rounded-xl font-medium transition-all duration-300 
+    cursor-pointer focus:outline-none 
+    ${
+      activeProject === project.id
+        ? "bg-blue-600 text-white border-2 border-blue-700 shadow-lg scale-105 hover:bg-blue-700"
+        : "bg-white text-gray-800 border-2 border-gray-300 hover:border-blue-500 hover:text-blue-600 hover:bg-blue-50"
+    }`}
         >
-          {project.icon} {project.name}
+          <span className="text-lg">{project.icon}</span>
+          <span>{project.name}</span>
         </button>
       ))}
     </div>
